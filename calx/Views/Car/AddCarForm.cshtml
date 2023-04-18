@@ -1,0 +1,59 @@
+﻿@model calx.ViewModels.TransmisionsAndStylesCar
+@{
+    ViewBag.Title = "AddCarForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add Car</h2>
+
+@using (Html.BeginForm("Save", "Car"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Car.Make)
+        @Html.TextBoxFor(m => m.Car.Make, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Car.Make)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Car.Model)
+        @Html.TextBoxFor(m => m.Car.Model, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Car.Model)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Car.Color)
+        @Html.TextBoxFor(m => m.Car.Color, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Car.Color)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Car.Year)
+        @Html.TextBoxFor(m => m.Car.Year, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Car.Year)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Car.ImgUrl)
+        @Html.TextBoxFor(m => m.Car.ImgUrl, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Car.ImgUrl)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Car.TransmissionId)
+        @Html.DropDownListFor(m => m.Car.TransmissionId, new SelectList(Model.Transmissions, "Id", "Name"), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Car.TransmissionId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Car.CarStyleId)
+        @Html.DropDownListFor(m => m.Car.CarStyleId, new SelectList(Model.CarStyles, "Id", "Name"), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Car.CarStyleId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Car.Price)
+        @Html.TextBoxFor(m => m.Car.Price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Car.Price)
+    </div>
+    @Html.HiddenFor(m => m.Car.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary"> Submit </button>
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

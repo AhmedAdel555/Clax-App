@@ -1,0 +1,36 @@
+﻿@model calx.Models.Car
+@{
+    ViewBag.Title = "GetCarDetailes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Car Detailes</h2>
+
+<div id="car">
+    <div id="carImage">
+        <img src="@Model.ImgUrl">
+    </div>
+
+    <div id="carInfo">
+        <h2>@Model.Model</h2>
+        <p> about car </p>
+
+        <ul>
+            <li> Make:   @Model.Make </li>
+            <li> Year:   @Model.Year </li>
+            <li> color:   @Model.Color </li>
+            <li> Transmission:   @Model.Transmission.Name </li>
+            <li> CarStyle:   @Model.CarStyle.Name </li>
+        </ul>
+
+        <hr />
+
+        <p> about seller </p>
+
+        <ul>
+            <li> User Name:    @Model.ApplicationUser.UserName </li>
+            <li> Email:    @Model.ApplicationUser.Email </li>
+            <li> Phone Number:    @Model.ApplicationUser.PhoneNumber </li>
+        </ul>
+    </div>
+</div>

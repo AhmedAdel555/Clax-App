@@ -1,0 +1,39 @@
+﻿@model List<calx.Models.Car>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if (Model.Count == 0)
+{
+    <p> no cars here </p>
+    <hr />
+}
+else
+{
+<div class="container">
+    <div id="carsHedear">
+        <h2>Cars for Sell</h2>
+        <span>[ @Model.Count ] car</span>
+    </div>
+    <hr />
+    <div class="cars">
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <a href="cars-detials/@Model[i].Id">
+                <div class="card">
+                    <img src="@Model[i].ImgUrl" alt="Avatar" style="width:100%; height: 200px;">
+                    <div class="container">
+                        <h4><b>@Model[i].Make - @Model[i].Model</b></h4>
+                        <h4><b>@Model[i].Year</b></h4>
+                        <h3><p>@Model[i].Price</p></h3>
+                    </div>
+                </div>
+            </a>
+        }
+
+    </div>
+</div>
+}
+
