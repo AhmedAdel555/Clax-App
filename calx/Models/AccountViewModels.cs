@@ -70,11 +70,6 @@ namespace calx.Models
         public string Email { get; set; }
 
         [Required]
-        [Display(Name = "User Name")]
-        [StringLength(255, MinimumLength = 3)]
-        public string UserName { get; set; }
-
-        [Required]
         [Phone]
         [Display(Name = "Phone Number")]
         public string PhoneNum { get; set; }

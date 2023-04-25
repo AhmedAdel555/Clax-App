@@ -5536,7 +5536,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
     .navbar-default .navbar-nav > li > a {
-        color: #999999;
+        color: #ffffff;
     }
 
         .navbar-default .navbar-nav > li > a:hover,
@@ -5569,7 +5569,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         }
 
         .navbar-default .navbar-toggle .icon-bar {
-            background-color: #999999;
+            background-color: #ffffff;
         }
 
     .navbar-default .navbar-collapse,
@@ -5586,7 +5586,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color: #999999;
+        color: #ffffff;
     }
 
         .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -5611,7 +5611,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-link {
-    color: #999999;
+    color: #ffffff;
 }
 
     .navbar-default .navbar-link:hover {
@@ -5619,7 +5619,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
 .navbar-default .btn-link {
-    color: #999999;
+    color: #ffffff;
 }
 
     .navbar-default .btn-link:hover,
@@ -5640,7 +5640,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
     .navbar-inverse .navbar-brand {
-        color: #999999;
+        color: #ffffff;
     }
 
         .navbar-inverse .navbar-brand:hover,
@@ -5650,11 +5650,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         }
 
     .navbar-inverse .navbar-text {
-        color: #999999;
+        color: #ffffff;
     }
 
     .navbar-inverse .navbar-nav > li > a {
-        color: #999999;
+        color: #ffffff;
     }
 
         .navbar-inverse .navbar-nav > li > a:hover,
@@ -5687,7 +5687,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         }
 
         .navbar-inverse .navbar-toggle .icon-bar {
-            background-color: #999999;
+            background-color: #ffffff;
         }
 
     .navbar-inverse .navbar-collapse,
@@ -5712,7 +5712,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-        color: #999999;
+        color: #ffffff;
     }
 
         .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -5737,7 +5737,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-link {
-    color: #999999;
+    color: #ffffff;
 }
 
     .navbar-inverse .navbar-link:hover {
@@ -5745,7 +5745,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
 .navbar-inverse .btn-link {
-    color: #999999;
+    color: #ffffff;
 }
 
     .navbar-inverse .btn-link:hover,
@@ -5775,11 +5775,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         .breadcrumb > li + li:before {
             content: ">\00a0";
             padding: 0 5px;
-            color: #999999;
+            color: #ffffff;
         }
 
     .breadcrumb > .active {
-        color: #999999;
+        color: #ffffff;
     }
 
 .pagination {
@@ -8782,6 +8782,7 @@ a.list-group-item-danger.active {
     #car {
         display: grid;
         grid-template-columns: 1fr;
+        border:none;
     }
 }
 
@@ -8790,6 +8791,7 @@ a.list-group-item-danger.active {
     #car {
         display: grid;
         grid-template-columns: 1fr;
+        border: none;
     }
 }
 
@@ -8799,6 +8801,7 @@ a.list-group-item-danger.active {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+        border: none;
     }
 }
 
@@ -8808,6 +8811,7 @@ a.list-group-item-danger.active {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+        border: none;
     }
 }
 
@@ -8817,6 +8821,7 @@ a.list-group-item-danger.active {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+        border: none;
     }
 }
 
@@ -8832,9 +8837,13 @@ a.list-group-item-danger.active {
     height: 400px;
     font-weight:bold;
 }
-#car #carInfo h2,p {
+#car #carInfo h2{
+    font-size: 38px;
     margin-bottom: 20px;
-    text-decoration:underline;
+}
+#car #carInfo p {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 /* Add some padding inside the card container */

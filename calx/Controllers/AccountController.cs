@@ -153,7 +153,7 @@ namespace calx.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { 
-                    UserName = model.UserName, 
+                    UserName = model.Email, 
                     Email = model.Email,
                     PhoneNumber = model.PhoneNum
                 };
